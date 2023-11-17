@@ -1,0 +1,55 @@
+return {
+    "catppuccin/nvim",
+    "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim",
+    "preservim/tagbar",
+    "mattn/emmet-vim",
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    "nvim-treesitter/playground",
+    "ThePrimeagen/harpoon",
+    "mbbill/undotree",
+    "tpope/vim-fugitive",
+    "nvim-lualine/lualine.nvim",
+    "onsails/lspkind-nvim",
+    "hrsh7th/cmp-nvim-lsp",
+    "MunifTanjim/prettier.nvim",
+    "windwp/nvim-autopairs",
+    "zchee/deoplete-jedi",
+    "tpope/vim-dadbod",
+    "kristijanhusak/vim-dadbod-ui",
+    "hrsh7th/nvim-cmp",
+    "lukas-reineke/indent-blankline.nvim",
+    { 'akinsho/toggleterm.nvim',         version = "*",      config = true },
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
+    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    "rafamadriz/friendly-snippets",
+    {
+        "L3MON4D3/LuaSnip",
+        build = "make install_jsregexp",
+        dependencies = { "rafamadriz/friendly-snippets" },
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {} -- this is equalent to setup({}) function
+    },
+    'saadparwaiz1/cmp_luasnip',
+    {
+        'stevearc/conform.nvim',
+        opts = {},
+    }
+}
+
