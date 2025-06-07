@@ -50,6 +50,7 @@ return {
     {
         'stevearc/conform.nvim',
         opts = {},
-    }
+    },
+    "ThePrimeagen/vim-be-good",
 }
 
