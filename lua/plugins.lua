@@ -24,7 +24,11 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
-        lazy = false,
+        lazy = true,
+        cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFocus" },
+        keys = {
+            { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file explorer" },
+        },
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
@@ -40,15 +44,19 @@ return {
         "L3MON4D3/LuaSnip",
         build = "make install_jsregexp",
         dependencies = { "rafamadriz/friendly-snippets" },
+        lazy = true,
+        event = "InsertEnter",
     },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
-        opts = {} -- this is equalent to setup({}) function
+        opts = {}
     },
     'saadparwaiz1/cmp_luasnip',
     {
         'stevearc/conform.nvim',
+        lazy = true,
+        event = { "BufReadPre", "BufNewFile" },
         opts = {},
     },
     "ThePrimeagen/vim-be-good",

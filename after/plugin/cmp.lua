@@ -1,6 +1,11 @@
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
-require('luasnip.loaders.from_vscode').lazy_load()
+
+-- Defer loading snippets to improve startup time
+vim.defer_fn(function()
+    require('luasnip.loaders.from_vscode').lazy_load()
+end, 100)
+
 require('luasnip').filetype_extend("javascript", { "javascriptreact" })
 require('luasnip').filetype_extend("javascript", { "html" })
 cmp.setup({
